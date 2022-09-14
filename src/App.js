@@ -57,7 +57,7 @@ function App() {
 				variation="primary"
 				onClick={() => handleClick('👴🏽')}
 			>
-				👴🏽 The Ken
+				👴🏽 The LaFrance
 			</Button>
 		</Flex>
 	)

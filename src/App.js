@@ -1,64 +1,38 @@
 import './App.css'
-import { Flex, View, Button } from '@aws-amplify/ui-react'
-import random from 'lodash.random'
+import { Flex, Button } from '@aws-amplify/ui-react'
 import { v4 } from 'uuid'
 import { Amplify } from '@aws-amplify/core'
 import * as gen from './generated'
+import { useRef } from 'react'
 Amplify.configure(gen.config)
-const channel = 'reactions'
 function App() {
-	const emojis = {
-		0: '🔥',
-		1: '👍🏽',
-		2: '👩🏽‍🔬',
-		3: '🦸🏽‍♂️',
-	}
+	const emojiRef = useRef([
+		{ emoji: '🔥', displayText: '🔥 Fiya' },
+		{ emoji: '👍🏽', displayText: "👍🏽 I'm messing with it" },
+		{ emoji: '🦦', displayText: '🦦 The Michael' },
+		{ emoji: '👴🏽', displayText: '👴🏽 The LaFrance' },
+		{ emoji: '🦞', displayText: '🦞 The Todd Libby' },
+	])
+
 	const handleClick = async (emote) => {
 		const reaction = {
 			id: v4(),
 			icon: emote,
 		}
+		const channel = 'reactions'
 		await gen.publish(channel, JSON.stringify(reaction))
-		// setReactionCount([...reactionCount, reaction])
 	}
 	return (
 		<Flex wrap={'wrap'} justifyContent="center">
-			<Button
-				width={'100%'}
-				variation="primary"
-				onClick={() => handleClick('🔥')}
-			>
-				🔥 Fiya
-			</Button>
-
-			<Button
-				width={'100%'}
-				variation="primary"
-				onClick={() => handleClick('👍🏽')}
-			>
-				👍🏽 I'm messing with it
-			</Button>
-			<Button
-				width={'100%'}
-				variation="primary"
-				onClick={() => handleClick('🦦')}
-			>
-				🦦 The Michael
-			</Button>
-			<Button
-				width={'100%'}
-				variation="primary"
-				onClick={() => handleClick('👨🏻‍🔬')}
-			>
-				👨🏻‍🔬 The Gant
-			</Button>
-			<Button
-				width={'100%'}
-				variation="primary"
-				onClick={() => handleClick('👴🏽')}
-			>
-				👴🏽 The LaFrance
-			</Button>
+			{emojiRef.current.map((emojiItem) => (
+				<Button
+					width={'100%'}
+					variation="primary"
+					onClick={() => handleClick(emojiItem.emoji)}
+				>
+					{emojiItem.displayText}
+				</Button>
+			))}
 		</Flex>
 	)
 }

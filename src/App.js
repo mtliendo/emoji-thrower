@@ -10,8 +10,8 @@ function App() {
 		{ emoji: '🔥', displayText: '🔥 Fiya' },
 		{ emoji: '👍🏽', displayText: "👍🏽 I'm messing with it" },
 		{ emoji: '🦦', displayText: '🦦 The Michael' },
-		{ emoji: '👴🏽', displayText: '👴🏽 The LaFrance' },
-		{ emoji: '🦞', displayText: '🦞 The Todd Libby' },
+		{ emoji: '🏎', displayText: '🏎 Indy' },
+		{ emoji: '🌮', displayText: '🌮 Gimme moar!!' },
 	])
 
 	const handleClick = async (emote) => {

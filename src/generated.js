@@ -2,10 +2,10 @@ import { API, graphqlOperation } from 'aws-amplify'
 
 export const config = {
 	aws_appsync_graphqlEndpoint:
-		'https://w6kfwypaejedfo42mcbl4hiuci.appsync-api.us-east-1.amazonaws.com/graphql',
+		'https://h3ni6aklwjalbd642kaqiwgdfy.appsync-api.us-east-1.amazonaws.com/graphql',
 	aws_appsync_region: 'us-east-1',
 	aws_appsync_authenticationType: 'API_KEY',
-	aws_appsync_apiKey: 'da2-dnr52rdn25brthx3rbynvd42ue',
+	aws_appsync_apiKey: 'da2-fecx2vpif5eotgoy6kraicamfu	',
 }
 
 export const subscribeDoc = /* GraphQL */ `

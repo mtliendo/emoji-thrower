@@ -8,9 +8,9 @@ Amplify.configure(gen.config)
 function App() {
 	const emojiRef = useRef([
 		{ emoji: '🔥', displayText: '🔥 Fiya' },
-		{ emoji: '👍🏽', displayText: "👍🏽 I'm messing with it" },
-		{ emoji: '🦦', displayText: '🦦 The Michael' },
-		{ emoji: '🏎', displayText: '🏎 Indy' },
+		{ emoji: '👍🏽', displayText: "👍🏽 This is great" },
+		{ emoji: '🦦', displayText: '🦦 Focus Ottered in!' },
+		{ emoji: '🏎', displayText: '🏎 Looks fast!' },
 		{ emoji: '🌮', displayText: '🌮 Gimme moar!!' },
 	])
 

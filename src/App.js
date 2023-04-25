@@ -8,7 +8,7 @@ function App() {
 		{ emoji: '🔥', displayText: '🔥 Fiya' },
 		{ emoji: '👍🏽', displayText: '👍🏽 This is great' },
 		{ emoji: '🦦', displayText: '🦦 Focus Ottered in!' },
-		{ emoji: '🌴', displayText: '🌴 Miami Vibes' },
+		{ emoji: '☁️', displayText: '☁️ Serverless Cloud' },
 		{ emoji: '👀', displayText: '👀 I see you!' },
 		{ emoji: '🌮', displayText: '🌮 Gimme moar!!' },
 	])

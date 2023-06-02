@@ -1,12 +1,12 @@
 import { Flex, Button } from '@aws-amplify/ui-react'
 import { Amplify } from '@aws-amplify/core'
-import * as gen from './generated'
 import { useRef } from 'react'
+import * as gen from './generated'
 Amplify.configure(gen.config)
 function App() {
 	const emojiRef = useRef([
 		{ emoji: '🔥', displayText: '🔥 Fiya' },
-		{ emoji: '👍🏽', displayText: '👍🏽 This is great' },
+		{ emoji: '🍑', displayText: 'Render ATL' },
 		{ emoji: '🦦', displayText: '🦦 Focus Ottered in!' },
 		{ emoji: '☁️', displayText: '☁️ Serverless Cloud' },
 		{ emoji: '👀', displayText: '👀 I see you!' },
@@ -17,7 +17,7 @@ function App() {
 		const reaction = {
 			icon: emote,
 		}
-		const channel = 'miami'
+		const channel = 'render'
 		await gen.publish(channel, JSON.stringify(reaction))
 	}
 	return (
